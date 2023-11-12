@@ -9,6 +9,12 @@
 
 Create a *.env* file and put the `BOT_TOKEN` you got from the BotFather
 
+```
+BOT_TOKEN = ""
+OWNER = ""
+CHANNEL_ID = ""
+```
+
 <br>
 
 3. Install prerequisites using the requirements.txt file.
