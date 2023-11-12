@@ -8,6 +8,9 @@
 2. Create a *.env* file in the main directory and add your credentials : 
 
 Create a *.env* file and put the `BOT_TOKEN` you got from the BotFather
+BOT_TOKEN = ""
+OWNER = ""
+CHANNEL_ID = ""
 
 <br>
 
