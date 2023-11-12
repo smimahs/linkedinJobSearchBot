@@ -15,12 +15,6 @@ msgs = {
     "help_admins": (
         "*You are an Admin | Owner. Here are your control commands.*\n\n"
         "• /check = _Check if bot is running_.\n"
-        "• /ljobs = _Searches linkedin for jobs default is BI Data Analyst Egypt_.\n"
-        "• /ljobs job title location = _Searches linkedin for job title in location_.\n"
-        "• /echo = _Echos back what ever you send it_.\n"
-        "• /addgroup group id = _Adds group to the allow list_.\n"
-        "• /rmgroup group id = _Removes group from allow list_.\n"
-        "• /getgroup = _Returns back a list of all allowed group(s) id(s) in the database_.\n"
-        "• /getgroup group id = _Returns back the group id if it exists in the database_."
+        "• /ljobs job title, location = _Searches linkedin for job title in location_.\n"
     ),
 }

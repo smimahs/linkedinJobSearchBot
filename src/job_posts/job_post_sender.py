@@ -3,6 +3,7 @@
 # Importing telegram bot api
 from telebot import TeleBot
 from telebot.types import Message
+from decouple import config
 
 # Importing the inline keyboard markup and button to create inline button for the job links
 from tgbot import jobs_post_inline_kb
@@ -24,7 +25,7 @@ def send_job_posts(
     channel_id : str, optional
         _description_, by default None : The channel id.
     """
-
+    #channel_id = config("CHANNEL_ID")
     # Looping over the posts list and sending each post to the user.
     for post in posts:
         bot.send_message(

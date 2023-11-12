@@ -55,6 +55,19 @@ group_msg_handler = GroupMessageHandler(bot)
 my_chat_member_handler = MyChatMember(bot)
 
 
+def send_menu(message):
+    markup = types.ReplyKeyboardMarkup(row_width=2)
+    help = types.KeyboardButton("help")
+    check = types.KeyboardButton("check")
+    job = types.KeyboardButton("ljobs")
+    markup.add(help, check, job)
+    
+    bot.send_message(
+        chat_id=message.chat.id,
+        text="Choose an option:",
+        reply_markup=markup
+    )
+
 # ----- REGISTERING JOB COMMAND HANDLERS  ----- #
 
 
@@ -97,11 +110,12 @@ def owner_chat(chat_handler: OwnerMessageHandler) -> None:
     chat_handler.message_handler(func=owner_cmd.check, commands=["check"])
 
     # /echo command in 'Private chat' for bot owner
-    chat_handler.message_handler(func=owner_cmd.echo, commands=["echo"])
+    #chat_handler.message_handler(func=owner_cmd.echo, commands=["echo"])
 
     # /help command in 'Private chat' for bot owner
     chat_handler.message_handler(func=owner_cmd.admin_help, commands=["help"])
 
+    '''
     # /addgroup command in chat
     chat_handler.message_handler(
         func=owner_cmd.add_allow_group,
@@ -119,6 +133,7 @@ def owner_chat(chat_handler: OwnerMessageHandler) -> None:
         func=owner_cmd.get_allow_group,
         commands=["getgroup"],
     )
+    '''
 
 
 # ----- REGISTERING GROUP COMMAND HANDLERS  ----- #
